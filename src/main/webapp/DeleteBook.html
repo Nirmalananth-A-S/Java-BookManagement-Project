@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Book | BookVault</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 24px 7%;
+        }
+
+        .brand { font-size: 25px; font-weight: bold; }
+
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 12px;
+            margin-top: 7px;
+            letter-spacing: 1.5px;
+        }
+
+        .container {
+            max-width: 620px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        h1 { font-size: 28px; margin-bottom: 10px; }
+
+        .muted {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(15,23,42,.04);
+        }
+
+        .warning {
+            padding: 14px;
+            margin-bottom: 24px;
+            border-radius: 7px;
+            background: #fef2f2;
+            color: #b91c1c;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+            margin-bottom: 22px;
+        }
+
+        input:focus {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220,38,38,.12);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover { background: #b91c1c; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 22px;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 30px auto; }
+            .card { padding: 22px; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">📚 BookVault</div>
+    <div class="subtitle">BOOK MANAGEMENT SYSTEM</div>
+</header>
+
+<main class="container">
+    <h1>Delete a Book</h1>
+    <p class="muted">
+        Remove a book from your collection using its ID.
+    </p>
+
+    <section class="card">
+        <div class="warning">
+            <strong>Warning:</strong> Deleting a book removes its
+            record from the database. This action cannot be undone.
+            Double-check the ID before submitting.
+        </div>
+
+        <form action="/BookManagement/deletebook" method="post">
+            <label for="bookId">Book ID</label>
+            <input type="number" id="bookId" name="bookId"
+                   min="1" step="1"
+                   placeholder="Enter book ID to delete" required>
+
+            <button class="submit-btn" type="submit">
+                Delete Book
+            </button>
+        </form>
+    </section>
+
+    <a class="back-link" href="Index.html">← Back to Dashboard</a>
+</main>
+
+<footer>BookVault · Java Servlet · JDBC · MySQL</footer>
+
+</body>
+</html>

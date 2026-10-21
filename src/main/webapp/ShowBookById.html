@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Book By ID</title>
+
+    <style>
+
+        /* General page styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        /* Main content container */
+        .container {
+            width: 90%;
+            max-width: 650px;
+            margin: 70px auto;
+            padding: 35px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.10);
+        }
+
+        /* Heading */
+        h1 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #1d4ed8;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        /* Form */
+        form {
+            margin-top: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            font-weight: 600;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 13px 14px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        /* Buttons */
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 7px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        /* Book details table */
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        th, td {
+            padding: 13px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* Links */
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                margin: 30px auto;
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            th, td {
+                padding: 9px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Show Book By ID</h1>
+    <p class="subtitle">Enter a book ID to view its details.</p>
+
+    <form action="showbook" method="get">
+        <label for="bookId">Book ID</label>
+        <input
+                type="number"
+                id="bookId"
+                name="bookId"
+                min="1"
+                placeholder="Enter book ID"
+                required
+        >
+
+        <button type="submit">Show Book</button>
+    </form>
+
+    <a href="Index.html" class="back-link">← Back to Home</a>
+
+</div>
+
+</body>
+</html>

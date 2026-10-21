@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BookVault | Book Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #111827;
+            color: white;
+            padding: 24px 7%;
+        }
+
+        .brand {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: #cbd5e1;
+            margin-top: 7px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+
+        .hero {
+            padding: 40px 7% 30px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .container {
+            padding: 0 7% 45px;
+        }
+
+        .section-title {
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            display: block;
+            background: white;
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s,
+            box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px
+            rgba(15, 23, 42, 0.08);
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .card h2 {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .action {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .blue { color: #2563eb; }
+        .green { color: #059669; }
+        .purple { color: #7c3aed; }
+        .orange { color: #d97706; }
+        .red { color: #dc2626; }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 22px 6%;
+            }
+
+            .hero {
+                padding: 30px 6% 25px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .container {
+                padding: 0 6% 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="brand">📚 BookVault</div>
+    <div class="subtitle">BOOK MANAGEMENT SYSTEM</div>
+</header>
+
+<section class="hero">
+    <h1>Your library, organized.</h1>
+    <p>
+        Manage your book collection from one place.
+        Choose an operation below to get started.
+    </p>
+</section>
+
+<main class="container">
+    <h2 class="section-title">Book Operations</h2>
+
+    <div class="cards">
+
+        <a class="card" href="AddBook.html">
+            <div class="icon">📗</div>
+            <h2>Add Book</h2>
+            <p>Register a new book in your collection.</p>
+            <span class="action blue">Open operation →</span>
+        </a>
+
+        <a class="card" href="viewallbooks">
+            <div class="icon">📚</div>
+            <h2>View All Books</h2>
+            <p>View all books saved in your database.</p>
+            <span class="action green">Open operation →</span>
+        </a>
+
+        <a class="card" href="ShowBookById.html">
+            <div class="icon">🔍</div>
+            <h2>Search Book</h2>
+            <p>Find a particular book using its ID.</p>
+            <span class="action purple">Open operation →</span>
+        </a>
+
+        <a class="card" href="UpdateBook.html">
+            <div class="icon">✏️</div>
+            <h2>Update Book</h2>
+            <p>Modify the name or price of a book.</p>
+            <span class="action orange">Open operation →</span>
+        </a>
+
+        <a class="card" href="DeleteBook.html">
+            <div class="icon">🗑️</div>
+            <h2>Delete Book</h2>
+            <p>Remove a book from your collection by ID.</p>
+            <span class="action red">Open operation →</span>
+        </a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    BookVault · Java Servlet · JDBC · MySQL
+</footer>
+
+</body>
+</html>
