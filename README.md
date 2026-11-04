@@ -99,7 +99,7 @@ Ensure that the MySQL JDBC driver is configured in `pom.xml`.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Nirmal32a/Java-BookManagement-Project.git
+   git clone https://github.com/Nirmalananth-A-S/Java-BookManagement-Project.git
    ```
 
 2. Open the project in IntelliJ IDEA.
@@ -200,8 +200,8 @@ The View All Books functionality and successful deletion were confirmed during d
 
 **Nirmalananth A S**
 
-- GitHub: [Nirmal32a](https://github.com/Nirmal32a)
-- LinkedIn: [nirmalananth-a-s-66a5a0339](https://www.linkedin.com/in/nirmalananth-a-s-66a5a0339/)
+- GitHub: [Nirmalananth-A-S](https://github.com/Nirmalananth-A-S)
+- LinkedIn: [nirmalananth-a-s-66a5a0339](https://www.linkedin.com/in/nirmalananth-a-s/)
 
 ---
 
